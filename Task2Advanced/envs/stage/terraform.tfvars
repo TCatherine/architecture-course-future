@@ -1,3 +1,4 @@
+# --- stage: средние ресурсы, конфигурация приближена к prod ---
 cloud_id  = "b1g-stage-cloud-id"
 folder_id = "b1g84tgmanunupr26hpa"
 
@@ -19,6 +20,6 @@ subnet_id = "e2l-stage-subnet-id"
 nat       = false
 
 ssh_user            = "ubuntu"
-ssh_public_key_path = "~/.ssh/id_ed25519.pub"
+# ssh_public_key_path задаётся в CI через TF_VAR_ssh_public_key_path (секрет не в репозитории)
 
 preemptible = false
