@@ -6,13 +6,13 @@ vm_name     = "future20-dev-vm"
 
 cores         = 2
 memory        = 2
-core_fraction = 20
+core_fraction = 10
 
 zone     = "ru-central1-a"
 image_id = "fd8kdq6d0p8sij7h5qe3" # Ubuntu 22.04 LTS
 
 boot_disk_size      = 20
-secondary_disk_size = 10
+secondary_disk_size = 5
 secondary_disk_type = "network-hdd"
 
 subnet_id = "e9b4gg20ju5b5cquk9lr"

@@ -5,18 +5,18 @@ folder_id = "b1g84tgmanunupr26hpa"
 environment = "prod"
 vm_name     = "future20-prod-vm"
 
-cores         = 8
-memory        = 16
-core_fraction = 100
+cores         = 2
+memory        = 2
+core_fraction = 20
 
 zone     = "ru-central1-d"
 image_id = "fd8kdq6d0p8sij7h5qe3" # Ubuntu 22.04 LTS
 
-boot_disk_size      = 50
-secondary_disk_size = 200
+boot_disk_size      = 10
+secondary_disk_size = 20
 secondary_disk_type = "network-ssd"
 
-subnet_id = "enp3lq7keectdfotp4a0"
+subnet_id = "fl8nln9jejd45oj7hro9"
 nat       = false
 
 ssh_user            = "ubuntu"

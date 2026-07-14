@@ -12,8 +12,8 @@ core_fraction = 20
 zone     = "ru-central1-a"
 image_id = "fd8kdq6d0p8sij7h5qe3" # Ubuntu 22.04 LTS
 
-boot_disk_size      = 20
-secondary_disk_size = 10
+boot_disk_size      = 10
+secondary_disk_size = 5
 secondary_disk_type = "network-hdd"
 
 subnet_id = "e9b4gg20ju5b5cquk9lr"

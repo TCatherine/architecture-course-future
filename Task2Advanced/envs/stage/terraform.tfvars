@@ -5,18 +5,18 @@ folder_id = "b1g84tgmanunupr26hpa"
 environment = "stage"
 vm_name     = "future20-stage-vm"
 
-cores         = 4
-memory        = 8
-core_fraction = 100
+cores         = 2
+memory        = 2
+core_fraction = 10
 
 zone     = "ru-central1-b"
 image_id = "fd8kdq6d0p8sij7h5qe3" # Ubuntu 22.04 LTS
 
-boot_disk_size      = 30
-secondary_disk_size = 50
+boot_disk_size      = 10
+secondary_disk_size = 20
 secondary_disk_type = "network-ssd"
 
-subnet_id = "e2l-stage-subnet-id"
+subnet_id = "e2lfiqqsfp846s66mbkd"
 nat       = false
 
 ssh_user            = "ubuntu"
