@@ -6,7 +6,7 @@ vm_name     = "future20-dev-vm"
 
 cores         = 2
 memory        = 2
-core_fraction = 10
+core_fraction = 20
 
 zone     = "ru-central1-a"
 image_id = "fd8kdq6d0p8sij7h5qe3" # Ubuntu 22.04 LTS

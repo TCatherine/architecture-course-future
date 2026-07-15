@@ -1,0 +1,205 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.5 Chrome/126.0.6478.183 Electron/31.3.0 Safari/537.36">
+  <diagram name="Event Storming — процесс «Лечение с оплатой в кредит»" id="jy3YDFINuo1hWae0X3m1">
+    <mxGraphModel dx="1030" dy="698" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2040" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="p0" />
+        <mxCell id="p1" parent="p0" />
+        <mxCell id="p2" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FCE6A2;fontStyle=2;" value="&lt;b&gt;Пациент&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;актор&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#7FB2F0;" value="&lt;b&gt;Записаться на приём&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;команда&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="270" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FDF0A6;" value="&lt;b&gt;Запись на приём&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;агрегат Appointment&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="500" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FFA94D;" value="&lt;b&gt;Создана запись на приём&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;appointment.scheduled&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="730" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p6" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FCE6A2;fontStyle=2;" value="&lt;b&gt;Врач&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;актор&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="960" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p7" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#7FB2F0;" value="&lt;b&gt;Провести приём, назначить исследование&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;команда&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="1190" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p8" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FDF0A6;" value="&lt;b&gt;Приём / Исследование&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;агрегаты Encounter, DiagnosticStudy&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="1420" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p9" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FFA94D;" value="&lt;b&gt;Назначено исследование&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;study.ordered&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="1650" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="p10" edge="1" parent="p1" source="p2" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p11" edge="1" parent="p1" source="p3" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p4" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p12" edge="1" parent="p1" source="p4" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p13" edge="1" parent="p1" source="p5" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p14" edge="1" parent="p1" source="p6" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p15" edge="1" parent="p1" source="p7" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p8" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p16" edge="1" parent="p1" source="p8" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p9" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p17" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#DCC3EC;" value="&lt;b&gt;Политика: новое исследование → ИИ-анализ&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;подписка ИИ-диагностики&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="40" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="p18" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#F4B6C2;" value="&lt;b&gt;ML-инференс&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;внешняя система (Python)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="270" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="p19" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FFA94D;" value="&lt;b&gt;Пройдено исследование ИИ&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;ai.assessment.completed&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="495" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="p20" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#C9E7B7;" value="&lt;b&gt;Заключение ИИ в карте приёма&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;read model врача&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="733" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="p21" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#7FB2F0;" value="&lt;b&gt;Завершить приём&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;команда врача&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="965" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="p22" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FDF0A6;" value="&lt;b&gt;Приём&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;агрегат Encounter&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="1190" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="p23" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FFA94D;" value="&lt;b&gt;Приём завершён&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;encounter.completed&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="1420" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="p24" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#DCC3EC;" value="&lt;b&gt;Политика: приём завершён → выставить счёт&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;подписка «Счета и платежи»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="1662" y="237" as="geometry" />
+        </mxCell>
+        <mxCell id="p25" edge="1" parent="p1" source="p17" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p18" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p26" edge="1" parent="p1" source="p18" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p19" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p27" edge="1" parent="p1" source="p19" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p20" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p28" edge="1" parent="p1" source="p20" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p21" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p29" edge="1" parent="p1" source="p21" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p22" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p30" edge="1" parent="p1" source="p22" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p23" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p31" edge="1" parent="p1" source="p23" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p24" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p32" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FDF0A6;" value="&lt;b&gt;Счёт&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;агрегат Invoice&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="27" y="373" as="geometry" />
+        </mxCell>
+        <mxCell id="p33" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FFA94D;" value="&lt;b&gt;Счёт выставлен&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;invoice.issued&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="263" y="373" as="geometry" />
+        </mxCell>
+        <mxCell id="p34" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#DCC3EC;" value="&lt;b&gt;Политика: крупный счёт → предложить кредит&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;подписка «Кредитование»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="500" y="373" as="geometry" />
+        </mxCell>
+        <mxCell id="p35" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#7FB2F0;" value="&lt;b&gt;Подать кредитную заявку&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;команда пациента&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="737" y="373" as="geometry" />
+        </mxCell>
+        <mxCell id="p36" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FDF0A6;" value="&lt;b&gt;Кредитная заявка&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;агрегат LoanApplication&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="971" y="373" as="geometry" />
+        </mxCell>
+        <mxCell id="p37" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FFA94D;" value="&lt;b&gt;Кредитная заявка подана&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;loan.application.submitted&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="1194" y="373" as="geometry" />
+        </mxCell>
+        <mxCell id="p38" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#DCC3EC;" value="&lt;b&gt;Политика: заявка → оценка риска&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;подписка «Антифрод»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="1413" y="373" as="geometry" />
+        </mxCell>
+        <mxCell id="p39" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FFA94D;" value="&lt;b&gt;Риск оценён&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;fraud.risk.scored&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="1666" y="373" as="geometry" />
+        </mxCell>
+        <mxCell id="p40" edge="1" parent="p1" source="p32" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p33" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p41" edge="1" parent="p1" source="p33" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p34" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p42" edge="1" parent="p1" source="p34" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p35" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p43" edge="1" parent="p1" source="p35" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p36" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p44" edge="1" parent="p1" source="p36" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p37" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p45" edge="1" parent="p1" source="p37" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p38" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p46" edge="1" parent="p1" source="p38" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p39" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p47" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#7FB2F0;" value="&lt;b&gt;Одобрить и оформить договор&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;команда (авто при низком риске)&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="27" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="p48" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FDF0A6;" value="&lt;b&gt;Кредитный договор&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;агрегат LoanAgreement&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="257" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="p49" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FFA94D;" value="&lt;b&gt;Создан кредитный договор&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;loan.agreement.created&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="487" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="p50" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#DCC3EC;" value="&lt;b&gt;Политика: договор → оплата счёта&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;подписка «Счета и платежи»&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="717" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="p51" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#FFA94D;" value="&lt;b&gt;Платёж получен&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;payment.received&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="947" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="p52" parent="p1" style="shadow=1;whiteSpace=wrap;html=1;strokeColor=none;fontSize=10;rounded=0;fillColor=#C9E7B7;" value="&lt;b&gt;NRT-витрина: выручка, загрузка клиник, кредитный портфель&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;портал самообслуживания&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="190" x="1177" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="p53" edge="1" parent="p1" source="p47" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p48" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p54" edge="1" parent="p1" source="p48" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p49" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p55" edge="1" parent="p1" source="p49" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p50" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p56" edge="1" parent="p1" source="p50" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p51" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p57" edge="1" parent="p1" source="p51" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="p52" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p58" edge="1" parent="p1" source="p9" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="p17" value="событие → политика">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1745" y="196" />
+              <mxPoint x="135" y="196" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p59" edge="1" parent="p1" source="p24" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="p32" value="событие → политика">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1745" y="350" />
+              <mxPoint x="135" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p60" edge="1" parent="p1" source="p39" style="endArrow=blockThin;html=1;fontSize=9;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="p47" value="низкий риск">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1761" y="483" />
+              <mxPoint x="122" y="483" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="p61" parent="p1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;fontSize=10;fontColor=#333333;fontStyle=2;" value="синий — команда&lt;br&gt;жёлтый — агрегат&lt;br&gt;оранжевый — событие&lt;br&gt;сиреневый — политика&amp;nbsp;&lt;br&gt;розовый — внешняя система&lt;br&gt;зелёный — read model. &lt;br&gt;пунктир — асинхронная реакция через событийную платформу." vertex="1">
+          <mxGeometry height="50" width="1700" x="27" y="626" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
