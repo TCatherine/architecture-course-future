@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="claude" pages="3">
   <diagram id="page1" name="Контейнеры — целевая архитектура (3 года)">
-    <mxGraphModel dx="4209" dy="3111" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1560" math="0" shadow="0">
+    <mxGraphModel dx="4416" dy="3851" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1560" math="0" shadow="0">
       <root>
         <mxCell id="Ко0" />
         <mxCell id="Ко1" parent="Ко0" />
@@ -16,11 +16,17 @@
         <mxCell id="Ко5" parent="Ко1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;resizable=0;" value="&lt;b&gt;Дата-инженер&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Person]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;развитие витрин и потоков&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="140" width="160" x="573" y="1281" as="geometry" />
         </mxCell>
+        <mxCell id="Ко6" parent="Ко1" style="rounded=1;fontSize=12;whiteSpace=wrap;html=1;dashed=1;arcSize=4;fillColor=none;strokeColor=#666666;fontColor=#333333;verticalAlign=bottom;align=left;spacingLeft=10;fontStyle=1;metaEdit=1;" value="Домен «Клиники / пациентский поток»" vertex="1">
+          <mxGeometry height="330" width="400" x="40" y="230" as="geometry" />
+        </mxCell>
         <mxCell id="Ко7" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Сервисы пациентского потока&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Java, K8s]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;запись, приём, биллинг клиник&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="68" width="195" x="58" y="257" as="geometry" />
         </mxCell>
         <mxCell id="Ко8" parent="Ко1" style="shape=cylinder3;size=12.151574337121076;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Операционная БД&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: PostgreSQL]&lt;/font&gt;" vertex="1">
           <mxGeometry height="64" width="136" x="45" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко10" parent="Ко1" style="rounded=1;fontSize=12;whiteSpace=wrap;html=1;dashed=1;arcSize=4;fillColor=none;strokeColor=#666666;fontColor=#333333;verticalAlign=bottom;align=left;spacingLeft=10;fontStyle=1;metaEdit=1;" value="Домен «Финтех / банк»" vertex="1">
+          <mxGeometry height="330" width="205" x="508" y="234" as="geometry" />
         </mxCell>
         <mxCell id="Ко11" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Финтех-сервисы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Go, Java, K8s]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;счета, платежи, кредиты&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="62" width="161" x="536.5" y="261" as="geometry" />
@@ -31,6 +37,9 @@
         <mxCell id="Ко13" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Антифрод и скоринг&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Kafka Streams]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;реактивная обработка транзакций&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="62" width="150" x="541" y="474" as="geometry" />
         </mxCell>
+        <mxCell id="Ко14" parent="Ко1" style="rounded=1;fontSize=12;whiteSpace=wrap;html=1;dashed=1;arcSize=4;fillColor=none;strokeColor=#666666;fontColor=#333333;verticalAlign=bottom;align=left;spacingLeft=10;fontStyle=1;metaEdit=1;" value="Домен «ИИ-сервисы»" vertex="1">
+          <mxGeometry height="330" width="400" x="-443" y="639" as="geometry" />
+        </mxCell>
         <mxCell id="Ко15" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;ML-инференс&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Python, FastAPI]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;диагностические подсказки врачу&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="100" width="155" x="-218" y="670" as="geometry" />
         </mxCell>
@@ -40,6 +49,9 @@
         <mxCell id="Ко17" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;MLOps-платформа&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: MLflow, Airflow]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;обучение, реестр моделей; работает с медданными внутри защищённого контура&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="120" width="360" x="-423" y="819" as="geometry" />
         </mxCell>
+        <mxCell id="Ко18" parent="Ко1" style="rounded=1;fontSize=12;whiteSpace=wrap;html=1;dashed=1;arcSize=4;fillColor=none;strokeColor=#666666;fontColor=#333333;verticalAlign=bottom;align=left;spacingLeft=10;fontStyle=1;metaEdit=1;" value="Домен «Головной офис» + новые направления" vertex="1">
+          <mxGeometry height="419" width="252" x="-287" y="1004" as="geometry" />
+        </mxCell>
         <mxCell id="Ко19" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;ERP / HR-сервисы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: SaaS/микросервисы]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;персонал, инвентаризация&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="100" width="183" x="-238" y="1017" as="geometry" />
         </mxCell>
@@ -48,6 +60,9 @@
         </mxCell>
         <mxCell id="Ко21" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;Новые домены: фарма, электроника, регионы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: по стандартному контракту]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;onboarding: события + схемы + IaC-шаблон окружения&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="120" width="184" x="-242.5" y="1133" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко22" parent="Ко1" style="rounded=1;fontSize=12;whiteSpace=wrap;html=1;dashed=1;arcSize=4;fillColor=none;strokeColor=#666666;fontColor=#333333;verticalAlign=bottom;align=left;spacingLeft=10;fontStyle=1;metaEdit=1;" value="Событийная платформа (ядро интеграции)" vertex="1">
+          <mxGeometry height="292" width="1216" x="40" y="608" as="geometry" />
         </mxCell>
         <mxCell id="Ко23" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Брокер событий&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Apache Kafka]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;геораспределённый кластер, доменные топики&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="78" width="621" x="149" y="698" as="geometry" />
@@ -64,6 +79,9 @@
         <mxCell id="Ко28" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Мониторинг платформы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Prometheus, Grafana]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;lag, DLQ-алёрты, SLA&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="90" width="170" x="1022" y="797" as="geometry" />
         </mxCell>
+        <mxCell id="Ко29" parent="Ко1" style="rounded=1;fontSize=12;whiteSpace=wrap;html=1;dashed=1;arcSize=4;fillColor=none;strokeColor=#666666;fontColor=#333333;verticalAlign=bottom;align=left;spacingLeft=10;fontStyle=1;metaEdit=1;" value="Облачная дата-платформа" vertex="1">
+          <mxGeometry height="260" width="783" x="40" y="930" as="geometry" />
+        </mxCell>
         <mxCell id="Ко30" parent="Ко1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Lakehouse&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: S3 + Iceberg]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;сырые и подготовленные данные, сотни ТБ&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="120" width="159" x="133" y="960" as="geometry" />
         </mxCell>
@@ -73,12 +91,20 @@
         <mxCell id="Ко32" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Каталог данных&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: DataHub]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;метаданные, lineage, data contracts&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="80" width="269" x="522" y="1084" as="geometry" />
         </mxCell>
+        <mxCell id="Ко33" parent="Ко1" style="rounded=1;fontSize=12;whiteSpace=wrap;html=1;dashed=1;arcSize=4;fillColor=none;strokeColor=#666666;fontColor=#333333;verticalAlign=bottom;align=left;spacingLeft=10;fontStyle=1;metaEdit=1;" value="Портал самообслуживания («витрина данных»)" vertex="1">
+          <mxGeometry height="348" width="308" x="996" y="944" as="geometry" />
+        </mxCell>
         <mxCell id="Ко34" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Портал самообслуживания&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: React + Trino]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;конструктор отчётов, срезы в рамках уровня доступа; без медданных&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="120" width="241" x="1035" y="964" as="geometry" />
         </mxCell>
         <mxCell id="Ко35" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;IAM / SSO + аудит&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Keycloak]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;RBAC, row-level security, маскирование, журнал доступа&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="120" width="237" x="1044" y="1149" as="geometry" />
         </mxCell>
+        <object label="Легаси — «мосты совместимости»" id="Ко36">
+          <mxCell parent="Ко1" style="rounded=1;fontSize=12;whiteSpace=wrap;html=1;dashed=1;arcSize=4;fillColor=none;strokeColor=#666666;fontColor=#333333;verticalAlign=bottom;align=left;spacingLeft=10;fontStyle=1;metaEdit=1;" vertex="1">
+            <mxGeometry height="384" width="685" x="1298" y="548" as="geometry" />
+          </mxCell>
+        </object>
         <mxCell id="Ко37" parent="Ко1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;DWH&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: SQL Server 2008]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;источник CDC на переходный период&lt;/i&gt;&lt;/font&gt;" vertex="1">
           <mxGeometry height="110" width="200" x="1539" y="563" as="geometry" />
         </mxCell>
