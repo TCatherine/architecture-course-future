@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" agent="claude" version="24.7.0">
+  <diagram id="page1" name="Роадмап внедрения Data Mesh (36 месяцев)">
+    <mxGraphModel dx="1400" dy="900" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1240" math="0" shadow="0">
+      <root>
+        <mxCell id="m0" />
+        <mxCell id="m1" parent="m0" />
+        <mxCell id="m2" value="Этап 0–6 мес.&lt;br&gt;&lt;b&gt;Пилот&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#999999;fontSize=12;" parent="m1" vertex="1">
+          <mxGeometry x="240" y="40" width="550" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m3" value="Этап 6–18 мес.&lt;br&gt;&lt;b&gt;Масштабирование&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#999999;fontSize=12;" parent="m1" vertex="1">
+          <mxGeometry x="800" y="40" width="550" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m4" value="Этап 18–36 мес.&lt;br&gt;&lt;b&gt;Поддержка и развитие доменов&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#999999;fontSize=12;" parent="m1" vertex="1">
+          <mxGeometry x="1360" y="40" width="550" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="m5" value="&lt;b&gt;Платформа данных&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#f0f0f0;align=center;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" parent="m1" vertex="1">
+          <mxGeometry x="20" y="130" width="200" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="m6" value="&lt;b&gt;Дата-продукты доменов&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#f0f0f0;align=center;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" parent="m1" vertex="1">
+          <mxGeometry x="20" y="340" width="200" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="m7" value="&lt;b&gt;Роли и команды&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#f0f0f0;align=center;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" parent="m1" vertex="1">
+          <mxGeometry x="20" y="550" width="200" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="m8" value="&lt;b&gt;Управление (governance)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#f0f0f0;align=center;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" parent="m1" vertex="1">
+          <mxGeometry x="20" y="760" width="200" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="m9" value="&lt;b&gt;Бизнес-цели&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=#f0f0f0;align=center;verticalAlign=middle;fontSize=11;whiteSpace=wrap;" parent="m1" vertex="1">
+          <mxGeometry x="20" y="970" width="200" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="m10" value="&lt;b&gt;Фундамент платформы&lt;/b&gt;&lt;br&gt;Kafka + Schema Registry + DLQ (единые принципы), Lakehouse (S3/Iceberg), IaC-модули сред доменов, CI/CD (Задания 1–2), IAM/RBAC" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="260" y="140" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m11" value="&lt;b&gt;Self-service «тонкий срез»&lt;/b&gt;&lt;br&gt;первая NRT-витрина + прототип портала (ClickHouse + Trino)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="530" y="140" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m12" value="&lt;b&gt;Пилот: 2 дата-продукта&lt;/b&gt;&lt;br&gt;«Финансовые расчёты» (счета/платежи) и «Пациентский поток» — витрины как продукты с SLA, владельцем и контрактом" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="260" y="350" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m13" value="&lt;b&gt;Стартовые роли&lt;/b&gt;&lt;br&gt;платформенная команда (4–6 инж.), 2 Data Product Owner в пилотных доменах, 2 Data Engineer, 1 BI-аналитик; обучение доменных команд" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="530" y="560" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m14" value="&lt;b&gt;Базовое управление&lt;/b&gt;&lt;br&gt;каталог схем обязателен, конвенции топиков/событий, data contracts v1, санкционирован federated governance board" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="260" y="770" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m15" value="&lt;b&gt;Цель: промежуточное состояние&lt;/b&gt;&lt;br&gt;архрешение согласовано, границы доменов определены (DDD, Задание 4), проекты витрины запланированы" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="m1" vertex="1">
+          <mxGeometry x="260" y="980" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m16" value="&lt;b&gt;Масштабирование платформы&lt;/b&gt;&lt;br&gt;потоковые витрины (Flink) в проде, DataHub-каталог, golden path: шаблон дата-продукта (IaC + CI + контракт)" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="820" y="140" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m17" value="&lt;b&gt;Мосты для легаси&lt;/b&gt;&lt;br&gt;CDC из DWH (Debezium), антикоррупционные слои для Camel-интеграций" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="1090" y="140" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m18" value="&lt;b&gt;Критические домены&lt;/b&gt;&lt;br&gt;кредитование, антифрод, ИИ-метрики, персонал/инвентаризация; 8–12 дата-продуктов; портал самообслуживания в проде для всех доменов" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="820" y="350" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m19" value="&lt;b&gt;Роли во всех доменах&lt;/b&gt;&lt;br&gt;DPO в каждом домене, федеративные Data Engineer'ы, BI-аналитики переходят от написания отчётов к развитию семантического слоя" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="1090" y="560" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m20" value="&lt;b&gt;Федеративное управление&lt;/b&gt;&lt;br&gt;метрики качества дата-продуктов (SLA, свежесть, полнота) в каталоге; политика PHI/PII-классификации; FinOps-бюджеты доменов" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="820" y="770" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m21" value="&lt;b&gt;Цель: финальное состояние (12 мес.)&lt;/b&gt;&lt;br&gt;портал самообслуживания реализован, бизнес-пользователи работают в новой архитектуре; легаси — временно в отдельных доменах" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="m1" vertex="1">
+          <mxGeometry x="820" y="980" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m22" value="&lt;b&gt;Эксплуатация и оптимизация&lt;/b&gt;&lt;br&gt;geo-развёртывание под новые регионы, автоскейлинг, вывод DWH/Camel из эксплуатации" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="1380" y="140" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m23" value="&lt;b&gt;Домены самостоятельны&lt;/b&gt;&lt;br&gt;домены выпускают дата-продукты без платформенной команды (self-service); onboarding фармы и электроники по стандартному контракту" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="1380" y="350" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m24" value="&lt;b&gt;Зрелая модель&lt;/b&gt;&lt;br&gt;платформенная команда — enabling team; сообщество практики DPO; найм под новые регионы" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="1400" y="560" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m25" value="&lt;b&gt;Автоматизированное управление&lt;/b&gt;&lt;br&gt;policy-as-code (проверка контрактов и PHI в CI), автоматический lineage, аудит для регуляторов" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffffff;strokeColor=#999999;" parent="m1" vertex="1">
+          <mxGeometry x="1380" y="770" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m26" value="&lt;b&gt;Цель: долгосрочная (3 года)&lt;/b&gt;&lt;br&gt;слабосвязанная событийная платформа; новые продукты, 2–3 региона, near-real-time; Camel/DWH — только демонтируемые мосты" style="rounded=1;whiteSpace=wrap;html=1;fontSize=10;verticalAlign=top;spacingTop=4;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="m1" vertex="1">
+          <mxGeometry x="1380" y="980" width="250" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="m27" value="Оранжевые карточки — бизнес-цели кейса, к которым привязан этап. Роли: Data Product Owner — владелец витрины-продукта в домене; Data Engineer — конвейеры и качество; BI-аналитик — семантический слой и self-service; платформенная команда — golden path и инфраструктура." style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontColor=#333333;fontStyle=2;whiteSpace=wrap;" parent="m1" vertex="1">
+          <mxGeometry x="240" y="1190" width="1600" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

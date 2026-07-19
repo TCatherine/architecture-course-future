@@ -1,0 +1,162 @@
+# =============================================================================
+# CI/CD-пайплайн Terraform (GitHub Actions): validate → plan → apply (approval).
+#
+# Безопасность и изоляция:
+#   * Секреты — только в GitHub Secrets (repo/environment), в коде их нет,
+#     в логах маскируются автоматически.
+#   * Каждое окружение (dev/stage/prod) изолировано: свой каталог, свой
+#     state-ключ в MinIO, свой GitHub Environment.
+#   * apply выполняется только из main и только после ручного одобрения:
+#     на environments настраиваются required reviewers — это и есть
+#     «apply по кнопке с approval».
+#   * Порядок применения: dev → stage → prod (max-parallel: 1).
+#   * Состояние хранится ТОЛЬКО в S3-backend (MinIO); применяется ровно
+#     тот бинарный план, который прошёл ревью (артефакт tfplan).
+#
+# Требуемые настройки репозитория:
+#   Secrets:
+#     AWS_ACCESS_KEY_ID      — key_id статического ключа SA (Object Storage, state)
+#     AWS_SECRET_ACCESS_KEY  — secret статического ключа SA (Object Storage, state)
+#     YC_SA_KEY_JSON         — содержимое key.json (авторизованный ключ SA) для провайдера
+#     SSH_PUBLIC_KEY         — публичный SSH-ключ для ВМ
+#   Environments: dev, stage, prod — с required reviewers (для prod обязательно).
+#   Endpoint Object Storage (storage.yandexcloud.net) задан в backend.tf —
+#   он публичный и не меняется, секретов в нём нет.
+# =============================================================================
+
+name: terraform
+
+on:
+  pull_request:
+    branches: [main, solution]
+  push:
+    branches: [main, solution]
+
+permissions:
+  contents: read
+
+env:
+  TF_IN_AUTOMATION: "true"
+  TF_INPUT: "false"
+  TF_VERSION: "1.10.5"
+  # доступ к S3-backend (Yandex Object Storage) — во всех джобах
+  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        environment: [dev, stage, prod]
+    defaults:
+      run:
+        working-directory: Task2Advanced/envs/${{ matrix.environment }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+          terraform_wrapper: false
+
+      - name: terraform init
+        run: terraform init
+
+      - name: terraform validate
+        run: terraform validate
+
+  plan:
+    needs: validate
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        environment: [dev, stage, prod]
+    concurrency:
+      group: tf-state-${{ matrix.environment }}   # не трогаем один state параллельно
+      cancel-in-progress: false
+    defaults:
+      run:
+        working-directory: Task2Advanced/envs/${{ matrix.environment }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+          terraform_wrapper: false
+
+      - name: Подготовить креды (SA-ключ YC и SSH-ключ из секретов)
+        run: |
+          echo '${{ secrets.YC_SA_KEY_JSON }}' > "$RUNNER_TEMP/key.json"
+          echo '${{ secrets.SSH_PUBLIC_KEY }}' > "$RUNNER_TEMP/id.pub"
+          echo "YC_SERVICE_ACCOUNT_KEY_FILE=$RUNNER_TEMP/key.json" >> "$GITHUB_ENV"
+          echo "TF_VAR_ssh_public_key_path=$RUNNER_TEMP/id.pub" >> "$GITHUB_ENV"
+
+      - name: terraform init
+        run: terraform init
+
+      - name: terraform plan
+        run: |
+          terraform plan -var-file=terraform.tfvars -lock-timeout=300s -out=tfplan
+          terraform show -no-color tfplan > tfplan.txt
+
+      - name: План в summary (для ревью)
+        run: |
+          echo "## Plan: ${{ matrix.environment }}" >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+          tail -c 60000 tfplan.txt >> "$GITHUB_STEP_SUMMARY"
+          echo '```' >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Сохранить план артефактом
+        uses: actions/upload-artifact@v4
+        with:
+          name: tfplan-${{ matrix.environment }}-${{ github.sha }}
+          path: |
+            Task2Advanced/envs/${{ matrix.environment }}/tfplan
+            Task2Advanced/envs/${{ matrix.environment }}/tfplan.txt
+          retention-days: 7
+          if-no-files-found: error   # план не создался — падаем сразу, а не в apply
+
+  apply:
+    if: github.event_name == 'push'
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 1                      # последовательное применение
+      fail-fast: true                      # сбой dev останавливает stage/prod
+      matrix:
+        environment: [dev, stage, prod]    # порядок = порядок применения
+    environment: ${{ matrix.environment }} # required reviewers = ручной approval
+    concurrency:
+      group: tf-state-${{ matrix.environment }}
+      cancel-in-progress: false
+    defaults:
+      run:
+        working-directory: Task2Advanced/envs/${{ matrix.environment }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: ${{ env.TF_VERSION }}
+          terraform_wrapper: false
+
+      - name: Подготовить креды (SA-ключ YC и SSH-ключ из секретов)
+        run: |
+          echo '${{ secrets.YC_SA_KEY_JSON }}' > "$RUNNER_TEMP/key.json"
+          echo '${{ secrets.SSH_PUBLIC_KEY }}' > "$RUNNER_TEMP/id.pub"
+          echo "YC_SERVICE_ACCOUNT_KEY_FILE=$RUNNER_TEMP/key.json" >> "$GITHUB_ENV"
+          echo "TF_VAR_ssh_public_key_path=$RUNNER_TEMP/id.pub" >> "$GITHUB_ENV"
+
+      - name: terraform init
+        run: terraform init
+
+      - name: Получить проверенный план
+        uses: actions/download-artifact@v4
+        with:
+          name: tfplan-${{ matrix.environment }}-${{ github.sha }}
+          path: Task2Advanced/envs/${{ matrix.environment }}
+
+      - name: terraform apply (ровно проверенный план)
+        run: terraform apply -lock-timeout=300s -auto-approve tfplan

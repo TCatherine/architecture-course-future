@@ -1,0 +1,447 @@
+<mxfile host="app.diagrams.net" agent="claude" pages="3">
+  <diagram id="page1" name="Контейнеры — целевая архитектура (3 года)">
+    <mxGraphModel dx="4495" dy="3305" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1560" math="0" shadow="0">
+      <root>
+        <mxCell id="Ко0" />
+        <mxCell id="Ко1" parent="Ко0" />
+        <mxCell id="Ко2" parent="Ко1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;resizable=0;" value="&lt;b&gt;Клиент&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Person]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;пациент клиники / клиент банка&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="140" width="160" x="531" y="54" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко3" parent="Ко1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;resizable=0;" value="&lt;b&gt;Оператор клиники&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Person]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="140" width="160" x="26" y="-47" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко4" parent="Ко1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;resizable=0;" value="&lt;b&gt;Бизнес-пользователь домена&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Person]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;self-service отчёты&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="140" width="170" x="1492" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко5" parent="Ко1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;resizable=0;" value="&lt;b&gt;Дата-инженер&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Person]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;развитие витрин и потоков&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="140" width="160" x="573" y="1281" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко7" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Сервисы пациентского потока&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Java, K8s]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;запись, приём, биллинг клиник&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="68" width="195" x="58" y="257" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко8" parent="Ко1" style="shape=cylinder3;size=12.151574337121076;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Операционная БД&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: PostgreSQL]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="64" width="136" x="45" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко11" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Финтех-сервисы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Go, Java, K8s]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;счета, платежи, кредиты&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="62" width="161" x="536.5" y="261" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко12" parent="Ко1" style="shape=cylinder3;size=10.999959309896127;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Core-banking БД&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: PostgreSQL]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="76" width="128" x="553" y="375" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко13" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Антифрод и скоринг&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Kafka Streams]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;реактивная обработка транзакций&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="62" width="150" x="541" y="474" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко15" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;ML-инференс&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Python, FastAPI]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;диагностические подсказки врачу&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="155" x="-218" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко16" parent="Ко1" style="shape=cylinder3;size=13.39990234375;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Feature Store&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Redis / Feast]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="74" width="133" x="-435" y="683" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко17" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;MLOps-платформа&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: MLflow, Airflow]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;обучение, реестр моделей; работает с медданными внутри защищённого контура&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="360" x="-423" y="819" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко19" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;ERP / HR-сервисы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: SaaS/микросервисы]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;персонал, инвентаризация&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="183" x="-238" y="1017" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко20" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Финансовая консолидация&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: микросервис]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;сквозные KPI группы&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="186" x="-238" y="1269" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко21" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;Новые домены: фарма, электроника, регионы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: по стандартному контракту]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;onboarding: события + схемы + IaC-шаблон окружения&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="184" x="-242.5" y="1133" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко23" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Брокер событий&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Apache Kafka]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;геораспределённый кластер, доменные топики&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="78" width="621" x="149" y="698" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко24" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Каталог схем&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Schema Registry]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;версионирование и совместимость контрактов&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="68" width="240" x="927" y="682" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко25" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Потоковая обработка&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Apache Flink]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;обогащение, агрегаты, NRT-витрины&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="62" width="240" x="741" y="828" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко27" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#D79B00;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#994C00;metaEdit=1;" value="&lt;b&gt;CDC-коннекторы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Debezium / Kafka Connect]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;события из легаси-БД без доработки DWH&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="68" width="230" x="937" y="608" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко28" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Мониторинг платформы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Prometheus, Grafana]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;lag, DLQ-алёрты, SLA&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="90" width="170" x="1022" y="797" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко30" parent="Ко1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Lakehouse&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: S3 + Iceberg]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;сырые и подготовленные данные, сотни ТБ&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="159" x="133" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко31" parent="Ко1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Потоковые витрины&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: ClickHouse]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;near-real-time агрегаты по доменам&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="187" x="304" y="1007" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко32" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Каталог данных&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: DataHub]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;метаданные, lineage, data contracts&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="80" width="269" x="522" y="1084" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко34" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Портал самообслуживания&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: React + Trino]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;конструктор отчётов, срезы в рамках уровня доступа; без медданных&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="241" x="1035" y="964" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко35" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;IAM / SSO + аудит&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Keycloak]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;RBAC, row-level security, маскирование, журнал доступа&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="237" x="1044" y="1149" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко37" parent="Ко1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;DWH&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: SQL Server 2008]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;источник CDC на переходный период&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="200" x="1539" y="563" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко38" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#D79B00;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#994C00;metaEdit=1;" value="&lt;b&gt;ESB&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Apache Camel]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;мост + антикоррупционный слой для синхронных легаси-интеграций&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="72" width="300" x="1414" y="828" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко39" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;PowerBuilder UI&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;вывод из эксплуатации, замена на веб-интерфейсы доменов&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="72" width="246" x="1321" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко40" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;Power BI поверх DWH&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;отчёты мигрируют в портал самообслуживания&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="71" width="236" x="1716" y="714" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко42" edge="1" parent="Ко1" source="Ко3" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" target="Ко7" value="работа с пациентским потоком [HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко43" edge="1" parent="Ко1" source="Ко2" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко7" value="запись, телемедицина [HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко44" edge="1" parent="Ко1" source="Ко2" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко11" value="мобильный / веб-банк [HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко45" edge="1" parent="Ко1" source="Ко7" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" target="Ко8" value="чтение/запись [SQL]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко46" edge="1" parent="Ко1" source="Ко7" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;exitX=0.869;exitY=1.042;exitDx=0;exitDy=0;exitPerimeter=0;" target="Ко9" value="медданные">
+          <mxGeometry relative="1" x="-0.5702" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ко47" edge="1" parent="Ко1" source="Ко11" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко12" value="чтение/запись [SQL]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко48" edge="1" parent="Ко1" source="Ко7" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко15" value="запрос диагностической подсказки [gRPC]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко49" edge="1" parent="Ко1" source="Ко15" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко16" value="фичи [gRPC]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко50" edge="1" parent="Ко1" source="Ко17" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ко9" value="обучение в защищённом контуре">
+          <mxGeometry relative="1" x="0.0789" y="15" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="-17" y="879" />
+              <mxPoint x="-17" y="498" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ко51" edge="1" parent="Ко1" source="Ко7" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;entryX=0.133;entryY=0.016;entryDx=0;entryDy=0;entryPerimeter=0;" target="Ко23" value="доменные события [Avro]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко53" edge="1" parent="Ко1" source="Ко23" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;" target="Ко13" value="поток транзакций">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко54" edge="1" parent="Ко1" source="Ко15" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="Ко23" value="события инференса (без PHI)">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко55" edge="1" parent="Ко1" source="Ко19" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="Ко23" value="события HR/инвентаризации">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-24" y="1067" />
+              <mxPoint x="-24" y="737" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ко56" edge="1" parent="Ко1" source="Ко20" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;entryX=0;entryY=0;entryDx=0;entryDy=82.5;entryPerimeter=0;" target="Ко31" value="сквозные KPI [SQL]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-145" y="1237" />
+              <mxPoint x="252" y="1237" />
+              <mxPoint x="252" y="1090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ко57" edge="1" parent="Ко1" source="Ко9" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;entryX=0.204;entryY=-0.035;entryDx=0;entryDy=0;entryPerimeter=0;" target="Ко23" value="события по контракту">
+          <mxGeometry relative="1" x="-0.0007" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ко58" edge="1" parent="Ко1" source="Ко23" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="Ко24" value="валидация схем">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко60" edge="1" parent="Ко1" source="Ко23" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;exitX=0.947;exitY=0.971;exitDx=0;exitDy=0;exitPerimeter=0;" target="Ко25" value="потоки событий">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко61" edge="1" parent="Ко1" source="Ко25" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="Ко31" value="NRT-витрины">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко62" edge="1" parent="Ко1" source="Ко25" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="Ко30" value="загрузка в Lakehouse">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко63" edge="1" parent="Ко1" source="Ко27" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" target="Ко23" value="события из легаси">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="866" y="642" />
+              <mxPoint x="866" y="698" />
+            </Array>
+            <mxPoint x="901" y="615" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ко64" edge="1" parent="Ко1" source="Ко37" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;exitX=0;exitY=0;exitDx=0;exitDy=75;exitPerimeter=0;" target="Ко27" value="CDC [transaction log]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко66" edge="1" parent="Ко1" source="Ко39" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;entryX=0.145;entryY=1;entryDx=0;entryDy=-4.35;entryPerimeter=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="Ко37" value="легаси-операции [ODBC]">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1302" y="727" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ко67" edge="1" parent="Ко1" source="Ко40" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;entryX=0.855;entryY=1;entryDx=0;entryDy=-4.35;entryPerimeter=0;" target="Ко37" value="легаси-отчёты [DirectQuery]">
+          <mxGeometry relative="1" x="-0.0002" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ко68" edge="1" parent="Ко1" source="Ко4" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко34" value="конструирует отчёты [HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко69" edge="1" parent="Ко1" source="Ко5" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко32" value="описывает данные, контракты [HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко70" edge="1" parent="Ко1" source="Ко34" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;exitX=0.009;exitY=0.324;exitDx=0;exitDy=0;exitPerimeter=0;" target="Ко31" value="быстрые срезы [SQL]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко71" edge="1" parent="Ко1" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;entryX=1;entryY=0;entryDx=0;entryDy=15;entryPerimeter=0;" target="Ко30" value="ad-hoc запросы [Trino]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1035" y="977" />
+              <mxPoint x="1032" y="977" />
+              <mxPoint x="1032" y="975" />
+            </Array>
+            <mxPoint x="1035" y="980" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ко72" edge="1" parent="Ко1" source="Ко34" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;entryX=0.999;entryY=0.574;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="Ко32" value="поиск наборов данных [REST]">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="913" y="1054" />
+              <mxPoint x="913" y="1130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ко73" edge="1" parent="Ко1" source="Ко35" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко34" value="аутентификация, RBAC, RLS [OIDC]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y3H0qQqCdkm2SGVHY6A-0" edge="1" parent="Ко1" source="Ко21" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;entryX=0;entryY=0.75;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="Ко9" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-8" y="1163" />
+              <mxPoint x="-8" y="517" />
+            </Array>
+            <mxPoint x="1350" y="470" as="sourcePoint" />
+            <mxPoint x="245" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Ко9" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#23A2D9;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#0E7DAD;metaEdit=1;" value="&lt;b&gt;Защищённый медицинский контур&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: PostgreSQL + Object Storage]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;медкарты, истории болезни, исследования — шифрование, не для аналитики&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="73" width="259" x="146" y="462" as="geometry" />
+        </mxCell>
+        <mxCell id="6Y3H0qQqCdkm2SGVHY6A-1" edge="1" parent="Ко1" source="Ко11" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;entryX=0.94;entryY=-0.027;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="Ко23" value="доменные события [Avro]">
+          <mxGeometry relative="1" x="0.5126" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="736" y="292" />
+              <mxPoint x="736" y="511" />
+              <mxPoint x="733" y="511" />
+            </Array>
+            <mxPoint x="476" y="420" as="sourcePoint" />
+            <mxPoint x="707" y="829" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6Y3H0qQqCdkm2SGVHY6A-2" edge="1" parent="Ко1" source="Ко38" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;entryX=1;entryY=0.861;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" target="Ко23" value="мост синхронных интеграций">
+          <mxGeometry relative="1" x="0.3816" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1273" y="882" />
+              <mxPoint x="1273" y="765" />
+            </Array>
+            <mxPoint x="2319" y="754" as="sourcePoint" />
+            <mxPoint x="1431" y="754" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page2" name="Компоненты — портал самообслуживания">
+    <mxGraphModel dx="1471" dy="997" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="Ко0" />
+        <mxCell id="Ко1" parent="Ко0" />
+        <mxCell id="Ко2" parent="Ко1" style="html=1;fontSize=11;dashed=0;whiteSpace=wrap;fillColor=#083F75;strokeColor=#06315C;fontColor=#ffffff;shape=mxgraph.c4.person2;align=center;metaEdit=1;resizable=0;" value="&lt;b&gt;Бизнес-пользователь&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Person]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="140" width="160" x="90" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко3" parent="Ко1" style="rounded=1;fontSize=12;whiteSpace=wrap;html=1;dashed=1;arcSize=4;fillColor=none;strokeColor=#666666;fontColor=#333333;verticalAlign=bottom;align=left;spacingLeft=10;fontStyle=1;metaEdit=1;" value="Портал самообслуживания [Container]" vertex="1">
+          <mxGeometry height="620" width="1080" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко4" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Web UI&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: React SPA]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;конструктор отчётов, дашборды, публикация&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="70" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко5" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;API Gateway / BFF&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: Node.js]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;маршрутизация, квоты, rate limit&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="340" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко6" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Контроль доступа&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: Java]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;RBAC, row-level security, маскирование PII&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="610" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко7" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Сервис отчётов&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: Java]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;сборка отчётов, экспорт xlsx/pdf&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="70" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко8" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Семантический слой&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: метрики/словарь]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;единые определения показателей для всех доменов&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="340" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко9" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Query-движок&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: Trino]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;федеративные запросы к витринам и Lakehouse&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="610" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко10" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Планировщик&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: Quartz]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;регулярные отчёты и рассылки&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="70" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко11" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Кэш результатов&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: Redis]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;ускорение повторных срезов&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="340" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко12" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Коннектор каталога&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: REST-клиент]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;поиск наборов, lineage, контракты&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="230" x="610" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко13" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;IAM / SSO&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Keycloak]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="240" x="1180" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко14" parent="Ко1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;Потоковые витрины&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: ClickHouse]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="240" x="1180" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко15" parent="Ко1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;Lakehouse&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: S3 + Iceberg]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="240" x="1180" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко16" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;Каталог данных&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: DataHub]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="240" x="1180" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко17" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;Брокер событий&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Kafka]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="200" x="880" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко18" edge="1" parent="Ко1" source="Ко2" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко4" value="строит отчёты [HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко19" edge="1" parent="Ко1" source="Ко4" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко5" value="[JSON/HTTPS]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко20" edge="1" parent="Ко1" source="Ко5" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко6" value="проверка прав">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко21" edge="1" parent="Ко1" source="Ко6" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко13" value="токены, роли [OIDC]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко22" edge="1" parent="Ко1" source="Ко5" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко7" value="запрос отчёта">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко23" edge="1" parent="Ко1" source="Ко7" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко8" value="метрики и измерения">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко24" edge="1" parent="Ко1" source="Ко8" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко9" value="план запроса">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко25" edge="1" parent="Ко1" source="Ко9" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко14" value="быстрые срезы [SQL]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко26" edge="1" parent="Ко1" source="Ко9" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко15" value="ad-hoc [Trino]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко27" edge="1" parent="Ко1" source="Ко7" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко11" value="кэширование">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко28" edge="1" parent="Ко1" source="Ко10" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко7" value="регулярные отчёты">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко29" edge="1" parent="Ко1" source="Ко4" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко12" value="поиск данных">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко30" edge="1" parent="Ко1" source="Ко12" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко16" value="[REST]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко31" edge="1" parent="Ко1" source="Ко17" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="Ко11" value="события обновления витрин — инвалидация">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко32" edge="1" parent="Ко1" source="Ко6" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко9" value="RLS-фильтры в запрос">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="page3" name="Компоненты — событийная платформа">
+    <mxGraphModel dx="1373" dy="931" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="Ко0" />
+        <mxCell id="Ко1" parent="Ко0" />
+        <mxCell id="Ко2" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;Домены-продюсеры / консюмеры&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: клиники, финтех, ИИ, ГО, новые]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="300" x="90" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко3" parent="Ко1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;DWH&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: SQL Server 2008]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;легаси&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="240" x="470" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко4" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;Старая шина&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Apache Camel]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;легаси&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="240" x="790" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко5" parent="Ко1" style="shape=cylinder3;size=15;whiteSpace=wrap;html=1;boundedLbl=1;rounded=0;labelBackgroundColor=none;fillColor=#8C8496;fontSize=11;fontColor=#ffffff;align=center;strokeColor=#736782;metaEdit=1;" value="&lt;b&gt;Дата-платформа&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Container: Lakehouse + ClickHouse]&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="260" x="1110" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко6" parent="Ко1" style="rounded=1;fontSize=12;whiteSpace=wrap;html=1;dashed=1;arcSize=4;fillColor=none;strokeColor=#666666;fontColor=#333333;verticalAlign=bottom;align=left;spacingLeft=10;fontStyle=1;metaEdit=1;" value="Событийная платформа [Container]" vertex="1">
+          <mxGeometry height="640" width="1360" x="40" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко7" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Кластер Kafka&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: брокеры, топики]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;доменные топики, партиционирование, retention&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="250" x="70" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко8" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Schema Registry&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: Avro/Protobuf]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;проверка совместимости версий схем (BACKWARD)&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="250" x="360" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко9" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;CDC-коннекторы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: Debezium / Kafka Connect]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;поток изменений из DWH без доработок легаси&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="250" x="510" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко10" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Антикоррупционный слой&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: адаптеры Camel-мост]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;REST/SOAP ↔ события; изоляция моделей легаси&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="250" x="940" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко11" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Потоковые джобы&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: Flink]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;обогащение, агрегаты, загрузка витрин&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="250" x="66" y="606" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко12" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;DLQ-процессор&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: retry/parking]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;единые политики повторов, алёрты, ручной разбор&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="250" x="360" y="487" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко13" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Governance-сервис&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: data contracts]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;реестр контрактов событий, ownership доменов&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="250" x="650" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко14" parent="Ко1" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#63BEF2;fontSize=11;fontColor=#ffffff;align=center;arcSize=10;strokeColor=#2086C9;metaEdit=1;" value="&lt;b&gt;Мониторинг&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;[Component: Prometheus/Grafana]&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-size:9px&quot;&gt;&lt;i&gt;consumer lag, DLQ-метрики, SLA потоков&lt;/i&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="110" width="250" x="940" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко15" edge="1" parent="Ко1" source="Ко2" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="Ко7" value="публикация/подписка [Avro]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко16" edge="1" parent="Ко1" source="Ко7" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко8" value="валидация схем">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко17" edge="1" parent="Ко1" source="Ко3" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="Ко9" value="transaction log">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко18" edge="1" parent="Ко1" source="Ко9" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="Ко7" value="события изменений">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко19" edge="1" parent="Ко1" source="Ко4" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко10" value="легаси-вызовы [REST/SOAP]">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко20" edge="1" parent="Ко1" source="Ко10" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="Ко7" value="трансляция в события">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко21" edge="1" parent="Ко1" source="Ко7" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="Ко11" value="потоки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко22" edge="1" parent="Ко1" source="Ко11" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="Ко5" value="NRT-витрины, Lakehouse">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко23" edge="1" parent="Ко1" source="Ко7" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;dashed=1;" target="Ко12" value="ошибки обработки">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко24" edge="1" parent="Ко1" source="Ко12" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко14" value="алёрты">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко25" edge="1" parent="Ко1" source="Ко8" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко13" value="схемы → контракты">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Ко26" edge="1" parent="Ко1" source="Ко7" style="endArrow=blockThin;html=1;fontSize=10;fontColor=#404040;strokeWidth=1;endFill=1;strokeColor=#828282;rounded=0;edgeStyle=orthogonalEdgeStyle;jettySize=auto;" target="Ко14" value="метрики брокера">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
